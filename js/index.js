@@ -12,12 +12,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
-document.querySelector('.contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    alert('Message envoyé avec succès !');
-    this.reset();
-});
-
 
 const observerOptions = {
     threshold: 0.1,
