@@ -217,6 +217,7 @@ nav a:hover::after {
     color: white;
     text-decoration: none;
     border-radius: 50px;
+    font-size: small;
     font-weight: 600;
     transition: all 0.3s;
     animation: fadeInUp 1s 0.4s backwards;
