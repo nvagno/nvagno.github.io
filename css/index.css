@@ -26,6 +26,7 @@ nav {
 .header-picture{
     width: 50%;
     margin-bottom: 1rem;
+    border-radius: 10px;
 }
 nav ul {
     list-style: none;
@@ -60,12 +61,12 @@ nav a:hover::after {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
+    min-height: 100vh;
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 2rem;
     align-items: center;
-    padding: 0 5%;
+    padding: 100px 5% 80px;
     position: relative;
     overflow: hidden;
 }
@@ -428,22 +429,163 @@ footer {
     transform: scale(1.2);
 }
 
-/* Responsive */
+/* Responsive Tablet */
+@media (max-width: 1024px) {
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 80px 4% 80px;
+        gap: 2rem;
+    }
+    
+    .hero-right {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    nav ul {
+        gap: 2rem;
+    }
+}
+
+/* Responsive Mobile */
 @media (max-width: 768px) {
+    nav {
+        padding: 1rem 3%;
+    }
+    
+    nav ul {
+        gap: 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 80px 4% 100px;
+        gap: 2rem;
+    }
+    
+    .hero-content {
+        text-align: center;
+    }
+    
+    .header-picture {
+        width: 150px;
+        margin: 0 auto 1rem;
+    }
+    
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 1.6rem;
     }
 
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .hero-right {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .hero-right > div {
+        grid-column: span 1 !important;
+    }
+    
+    .mini-section {
+        padding: 1.2rem;
+    }
+    
+    .mini-section h3 {
+        font-size: 1rem;
+    }
+    
+    .mini-section p, .mini-section ul {
+        font-size: 0.85rem;
+    }
+    
+    .skill-item {
+        padding: 0.6rem;
+        font-size: 0.85rem;
+    }
+    
+    .cta-button {
+        padding: 0.8rem 2rem;
+        font-size: 0.9rem;
+    }
+    
     .about-content {
         flex-direction: column;
         text-align: center;
     }
-
-    nav ul {
-        gap: 1.5rem;
-    }
-
+    
     section {
         padding: 3rem 5%;
+    }
+    
+    footer {
+        font-size: 0.75rem;
+        padding: 0.8rem;
+    }
+}
+
+/* Responsive Small Mobile */
+@media (max-width: 480px) {
+    nav {
+        padding: 0.8rem 3%;
+    }
+    
+    nav ul {
+        gap: 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .header-picture{
+        width: 93vw !important;
+        margin-bottom: 1rem;
+        align-items: center;
+        border-radius: 10px;
+    }
+    
+    .hero {
+        padding: 70px 3% 100px;
+        gap: 1.5rem;
+    }
+    
+    .header-picture {
+        width: 120px;
+    }
+    
+    .hero h1 {
+        font-size: 1.3rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+    
+    .mini-section {
+        padding: 1rem;
+    }
+    
+    .mini-section h3 {
+        font-size: 0.95rem;
+    }
+    
+    .mini-section p, .mini-section ul {
+        font-size: 0.8rem;
+    }
+    
+    .skill-item {
+        padding: 0.5rem;
+        font-size: 0.8rem;
+        margin: 0.4rem 0;
+    }
+    
+    .cta-button {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.85rem;
+    }
+    
+    footer {
+        font-size: 0.7rem;
+        padding: 0.7rem;
     }
 }
